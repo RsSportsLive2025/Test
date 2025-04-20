@@ -1,5 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
+<style>
+  .video-container {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .video-container iframe {
+    width: 100%;
+    height: 800px;
+    border: none;
+  }
+
+  .live-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: red;
+    color: white;
+    padding: 6px 12px;
+    font-weight: bold;
+    border-radius: 20px;
+    font-family: Arial, sans-serif;
+    animation: pulse 1.5s infinite;
+    font-size: 14px;
+  }
+
+  @keyframes pulse {
+    0% { background-color: red; }
+    50% { background-color: #ff4d4d; }
+    100% { background-color: red; }
+  }
+</style>
+
+<div class="video-container">
 <head>
   <meta charset="UTF-8">
   <title>Overlay Video Player</title>
@@ -40,48 +77,6 @@
 
   <div class="container">
     <img class="overlay-image" src="https://imgur.com/DoAeeDP.png" alt="Overlay">
-
-</head>
-<body>
-<style>
-  .video-container {
-    position: relative;
-    width: 100%;
-    max-width: 700px;
-    margin: 0 auto;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  }
-
-  .video-container iframe {
-    width: 100%;
-    height: 800px;
-    border: none;
-  }
-
-  .live-badge {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background-color: red;
-    color: white;
-    padding: 6px 12px;
-    font-weight: bold;
-    border-radius: 20px;
-    font-family: Arial, sans-serif;
-    animation: pulse 1.5s infinite;
-    font-size: 14px;
-  }
-
-  @keyframes pulse {
-    0% { background-color: red; }
-    50% { background-color: #ff4d4d; }
-    100% { background-color: red; }
-  }
-</style>
-
-<div class="video-container">
   <iframe 
     src="https://rips.in/player.php?ch=4" 
     allowfullscreen 
