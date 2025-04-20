@@ -1,69 +1,32 @@
-<style>
-  .video-container {
-    position: relative;
-    width: 100%;
-    max-width: 700px;
-    margin: 0 auto;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  }
-
-  .video-container iframe {
-    width: 100%;
-    height: 800px;
-    border: none;
-  }
-
-  .live-badge {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background-color: red;
-    color: white;
-    padding: 6px 12px;
-    font-weight: bold;
-    border-radius: 20px;
-    font-family: Arial, sans-serif;
-    animation: pulse 1.5s infinite;
-    font-size: 14px;
-  }
-
-  @keyframes pulse {
-    0% { background-color: red; }
-    50% { background-color: #ff4d4d; }
-    100% { background-color: red; }
-  }
-</style>
-
-<div class="video-container">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Overlay Video Player</title>
+  <title>RS Sports Live TV</title>
   <style>
     .overlay-image {
       position: absolute;
       top: 15px;
-      left: 40px;
+      left: 20px;
       width: 90px;
       max-width: 30vw;
       height: auto;
       z-index: 10;
       pointer-events: none;
-      opacity: 0.9;
-      transition: all 0.3s ease-in-out;
+      opacity: 0.95;
     }
 
     body {
       margin: 0;
       padding: 0;
+      background-color: black;
       overflow: hidden;
     }
 
     .container {
       position: relative;
       width: 100%;
-      height: 480px;
+      height: 100vh;
     }
 
     iframe {
@@ -76,11 +39,11 @@
 <body>
 
   <div class="container">
-    <img class="overlay-image" src="https://imgur.com/DoAeeDP.png" alt="Overlay">
-  <iframe 
-    src="https://rips.in/player.php?ch=4" 
-    allowfullscreen 
-    sandbox="allow-same-origin allow-scripts allow-presentation">
-  </iframe>
-  <div class="live-badge">LIVE</div>
-</div>
+    <img class="overlay-image" src="https://imgur.com/DoAeeDP.png" alt="RS Sports">
+    <iframe scrolling="no" allowtransparency="true" marginwidth="0" marginheight="0" 
+            src="https://rips.in/player.php?ch=4" allowfullscreen>
+    </iframe>
+  </div>
+
+</body>
+</html>
