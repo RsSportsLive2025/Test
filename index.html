@@ -1,71 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Overlay Video Player</title>
-  <style>
-    .video-container {
-      position: relative;
-      width: 100%;
-      max-width: 800px;
-      margin: 0 auto;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    }
+<style>
+  .video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
 
-    .video-container iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
+  .video-container iframe {
+    width: 100%;
+    height: 800px;
+    border: none;
+  }
 
-    .live-badge {
-      position: absolute;
-      top: 15px;
-      right: 15px;
-      background-color: red;
-      color: white;
-      padding: 6px 12px;
-      font-weight: bold;
-      border-radius: 20px;
-      font-family: Arial, sans-serif;
-      animation: pulse 1.5s infinite;
-      font-size: 14px;
-    }
+  .live-badge {
+    position: absolute;
+    top: 15px;
+    right: 235px;
+    background-color: red;
+    color: white;
+    padding: 6px 12px;
+    font-weight: bold;
+    border-radius: 20px;
+    font-family: Arial, sans-serif;
+    animation: pulse 1.5s infinite;
+    font-size: 14px;
+  }
 
-    @keyframes pulse {
-      0% { background-color: red; }
-      50% { background-color: #ff4d4d; }
-      100% { background-color: red; }
-    }
+  @keyframes pulse {
+    0% { background-color: red; }
+    50% { background-color: #ff4d4d; }
+    100% { background-color: red; }
+  }
+</style>
 
-    /* Overlay image styling */
-    .overlay-image {
-      position: absolute;
-      top: 15px;
-      left: 40px;
-      width: 90px;
-      max-width: 30vw;
-      height: auto;
-      z-index: 10;
-      pointer-events: none;
-      opacity: 0.9;
-      transition: all 0.3s ease-in-out;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="video-container">
-    <img class="overlay-image" src="https://imgur.com/DoAeeDP.png" alt="Overlay">
-    <iframe 
-      src="https://rips.in/player.php?ch=4" 
-      allowfullscreen 
-      sandbox="allow-same-origin allow-scripts allow-presentation">
-    </iframe>
-    <div class="live-badge">LIVE</div>
-  </div>
-
-</body>
-</html>
+<div class="video-container">
+  <iframe 
+    src="https://rips.in/player.php?ch=4" 
+    allowfullscreen 
+    sandbox="allow-same-origin allow-scripts allow-presentation">
+  </iframe>
+  <div class="live-badge">RS-SPORTS</div>
+</div>
